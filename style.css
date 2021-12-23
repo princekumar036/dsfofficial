@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+:root {
+    --dsf-red: #AF0909;
+    --dsf-blue: #252592;
+}
+
+header .logo-img {
+    max-width: 100px;
+}
+
+header {
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.logo-img {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.25) rotate(-15deg);
+}
+
+.logo-text-word::first-letter, 
+.nav-list-item:not(:last-child):first-letter {
+    color: var(--dsf-red);
+}
+
+.nav-list-item {
+    transition: all 0.1s ease;
+}
+
+.nav-list-item:not(:last-child):hover {
+    border-bottom: 3px solid var(--dsf-red);
+}
+
+.nav-list-item.active {
+    border-bottom: 3px solid var(--dsf-red);
+}
+
+.nav-list-item:last-child{
+    transition: transform 0.2s ease;
+}
+.nav-list-item:last-child:hover {
+    transform: scale(1.05);
+}

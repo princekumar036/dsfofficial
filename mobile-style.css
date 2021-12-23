@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root {
+    --dsf-red: #AF0909;
+    --dsf-blue: #252592;
+}
+
+/* header */
+
+    header {
+        font-family: 'Roboto Condensed';
+        font-weight: 700;
+    }
+
+        /* logo image */
+
+            header .logo-img {
+                max-width: 70px;
+            }
+
+            @media screen and (min-width:1024px) {
+                header .logo-img {
+                    max-width: 100px;
+                }
+            }
+
+        /* logo text */
+
+            .logo-text {
+                word-spacing: 5px;
+            }
+        
+            .logo-text-word {
+                display: block;
+            }
+        
+            .logo-text-word::first-letter,
+            .nav-list-item:not(:last-child):first-letter {
+                color: var(--dsf-red);
+            }
+
+        /* menu icons */    
+
+            /* header i.fa-bars {
+                background-color: var(--dsf-red);
+                color: white;
+            } */
+
+            /* header i.fa-bars:hover {
+                background-color: var(--dsf-blue);
+            } */
+
+        
+        /* menu button */
+            
+            .nav-list-item:last-child .nav-item-link{
+                /* color: white; */
+                background-color: var(--dsf-red);
+            }
