@@ -6,31 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Democratic Students' Federation</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/1fac2f10ac.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <main>
-        <header class="header bg-slate-100 flex justify-between items-center py-1 px-24">
-            <a href="index.html" class="logo flex">
-                <img src="files/logo-old.png" alt="DSF Logo" class="logo-img mr-2">
-                <div class="logo-text">
-                    <p class="logo-text-word">democratic</p>
-                    <p class="logo-text-word">students'</p>
-                    <p class="logo-text-word">federation</p>
-                </div>
-            </a>
-            <nav class="nav">
-                <ul class="nav-list flex gap-x-5 items-center">
-                    <li class="nav-list-item active"><a class="nav-link nav-link-basic active" href="index.html">home</a></li>
-                    <li class="nav-list-item"><a class="nav-link nav-link-basic" href="about.html">about</a></li>
-                    <li class="nav-list-item"><a class="nav-link nav-link-basic" href="events.html">events</a></li>
-                    <li class="nav-list-item"><a class="nav-link nav-link-basic" href="releases.html">releases</a></li>
-                    <li class="nav-list-item"><a class="nav-link nav-link-basic" href="contact.html">contact</a></li>
-                    <li class="nav-list-item"><a class="nav-link nav-link-special bg-red-700 text-white px-10 py-2 rounded-lg" href="join-us.html">join us</a></li>
+        <header class="lg:px-10 xl:px-20 lg:flex justify-between items-center sticky top-0 left-0 right-0 bg-slate-100">
+
+            <div class="header flex justify-between items-center px-5 flex-wrap">
+                <a href="index.html" class="logo contents">
+                    <div class="logo-img mr-2"><img src="files/logo-new-color.png" alt="DSF Logo"></div>
+                    <p class="logo-text hidden md:inline-block md:text-3xl lg:flex flex-col lg:text-xl">
+                        <span class="logo-text-word">democratic</span>
+                        <span class="logo-text-word">students'</span>
+                        <span class="logo-text-word">federation</span>
+                    </p>
+                </a>
+                <button id="nav-toggler" data-target="#nav-menu" class="nav-toggler lg:hidden">
+                    <i class="nav-toggler-open fa-solid fa-bars text-2xl"></i>
+                    <i class="nav-toggler-close fa-solid fa-xmark text-3xl hidden"></i>
+                </button>
+            </div>
+
+            <nav id="nav-menu" class="nav px-5 pb-3 text-right text-xl md:text-2xl lg:text-xl hidden lg:flex">
+                <ul class="nav-list lg:flex items-center gap-8">
+                    <li class="nav-list-item"><a href="index.html" class="nav-item-link active">home</a></li>
+                    <li class="nav-list-item"><a href="about.html" class="nav-item-link">about</a></li>
+                    <li class="nav-list-item"><a href="events.html" class="nav-item-link">events</a></li>
+                    <li class="nav-list-item"><a href="releases.html" class="nav-item-link">releases</a></li>
+                    <li class="nav-list-item"><a href="contact-us.html" class="nav-item-link">contact us</a></li>
+                    <li class="nav-list-item mt-4 lg:mt-0"><a href="join-us.html" class="nav-item-link bg-red-700 text-white pl-7 pr-4 py-1 lg:py-2 lg:px-10 rounded-md">join us</a></li>
                 </ul>
             </nav>
+
         </header>
+
+        <section class="hero px-5 py-10 lg:px-24 lg:flex justify-center gap-20 items-center">
+            <div><img src="files/dsf-old-black.svg" alt="DSF Motto" class="motto-img max-w-sm lg:max-w-xl"></div>
+            <p class="motto-text text-4xl text-center lg:text-8xl xl:text-9xl lg:flex flex-col">
+                <span class="motto-text-word">Educate,</span>
+                <span class="motto-text-word lg:leading-loose">Agitate,</span>
+                <span class="motto-text-word">Organise!</span>
+            </p>
+        </section>
+
+        <section class="about">
+            
+        </section>
+        
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
