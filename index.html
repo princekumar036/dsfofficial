@@ -10,11 +10,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="max-w-screen-2xl mx-auto">
     <main>
-        <header class="lg:px-10 xl:px-20 lg:flex justify-between items-center sticky top-0 left-0 right-0 bg-slate-100">
+        <header class="lg:px-10 lg:flex justify-between items-center lg:sticky top-0 left-0 right-0 bg-gray-200">
 
-            <div class="header flex justify-between items-center px-5 flex-wrap">
+            <div class="header flex justify-between items-center px-5 flex-wrap ">
                 <a href="index.html" class="logo contents">
                     <div class="logo-img mr-2"><img src="files/logo-new-color.png" alt="DSF Logo"></div>
                     <p class="logo-text hidden md:inline-block md:text-3xl lg:flex flex-col lg:text-xl">
@@ -42,19 +42,49 @@
 
         </header>
 
-        <section class="hero px-5 py-10 lg:px-24 lg:flex justify-center gap-20 items-center">
-            <div><img src="files/dsf-old-black.svg" alt="DSF Motto" class="motto-img max-w-sm lg:max-w-xl"></div>
-            <p class="motto-text text-4xl text-center lg:text-8xl xl:text-9xl lg:flex flex-col">
+        <section class="hero px-5 py-10 lg:px-24 lg:flex justify-center gap-20 items-center bg-stone-100">
+            <div><img src="files/dsf-old-black.svg" alt="DSF Motto" class="motto-img max-w-xs lg:max-w-xl"></div>
+            <p class="motto-text text-4xl text-center lg:text-8xl xl:text-9xl lg:flex flex-col leading-normal">
                 <span class="motto-text-word">Educate,</span>
                 <span class="motto-text-word lg:leading-loose">Agitate,</span>
                 <span class="motto-text-word">Organise!</span>
             </p>
         </section>
 
-        <section class="about">
-            
+        <section class="about px-5 py-10 text-center lg:text-left lg:flex justify-center items-center gap-10 bg-red-100">
+            <div class="about-img-container mb-4 order-2"><img src="files/unit-conf.png" alt="DSF Comrades" class="about-img"></div>
+            <div class="about-text order-1">
+                <h1 class="h about-head">About DSF</h1>
+                <p class="about-description max-w-sm mx-auto">Democratic Students' Federation is an independent student organisation. DSF was formed in 2012-13.</p>
+                <a href="about.html" class="btn bg-red-700 text-white py-2 px-10 rounded-md inline-block mt-4">learn more</a>
+            </div>
         </section>
         
+        <section class="movements px-5 py-10 text-center bg-gray-100">
+            <div class="head">
+                <h1 class="h">10 Years of DSF</h1>
+                <p class="mb-8">DSF in movements</p>
+            </div>
+            
+            <div class="grid place-content-center md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-red-100">
+                    <img src="files/placeholder-portrait.png" alt="img">
+                    <p>Movement 1</p>
+                </div>
+                <div>
+                    <div><img src="files/placeholder-portrait.png" alt="img"></div>
+                    <p>Movement 2</p>
+                </div>
+                <div>
+                    <div><img src="files/placeholder-portrait.png" alt="img"></div>
+                    <p>Movement 3</p>
+                </div>
+                <div>
+                    <div><img src="files/placeholder-portrait.png" alt="img"></div>
+                    <p>Movement 4</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="script.js"></script>
