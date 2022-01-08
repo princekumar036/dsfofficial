@@ -6,18 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>democratic students' federation</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1fac2f10ac.js" crossorigin="anonymous"></script>
+
+    <style>
+        .swiper {
+  width: 600px;
+  height: 300px;
+}
+    </style>
+    
 </head>
 
 <body class="max-w-screen-2xl mx-auto">
 
-    <!-- HEADER -->
+<!-- HEADER -->
     <header class="font-rbto-cnsd font-bold text-lg bg-gray-300 px-10 py-2 lg:flex justify-between items-center lg:text-xl">
         
         <div class="flex justify-between items-center">
@@ -53,7 +62,7 @@
 
     </header>
 
-    <!-- HERO SECTION -->
+<!-- HERO SECTION -->
     <section class="p-10 grid lg:grid-cols-2 gap-10 items-center text-center lg:text-left bg-slate-100">
         <div><img class="w-96 lg:w-[36rem] mx-auto lg:mr-0" src="files/star-black-lg.svg" alt=""></div>
         <div class="font-anton text-3xl lg:text-8xl xl:text-9xl">
@@ -63,34 +72,129 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+<!-- ABOUT SECTION -->
     <section>
-
         <section class="p-10 text-center lg:hidden">
             <h2 class="text-4xl font-rbto-cnsd font-bold mb-7">About DSF</h2>
             <div class="row-span-3"><img src="files/unit-conf.png" alt=""></div>
             <p class="my-5 text-justify">DSF is an independent, leftwing students' organisation which was formed in 2012-13 by student activists of JNU. DSF seeks to strengthen the progressive and democratic students' movement across the country on the basis of independent, principled positions on the issues confronting the student community.</p>
-            <a class="font-rbto-cnsd font-bold md:text-lg text-white px-10 py-2 bg-red-800 rounded-md" href="about.html">learn more</a>
+            <a class="font-rbto-cnsd font-bold md:text-lg text-white px-10 py-2 bg-red-800 rounded-md block mt-2 shadow-lg hover:scale-95" href="about.html">learn more</a>
         </section>
     
         <section class="p-10 max-w-screen-xl mx-auto text-left hidden lg:flex justify-center gap-10 items-center">
             <div class="justify-center">
                 <h2 class="text-4xl font-rbto-cnsd font-bold">About DSF</h2>
                 <p class="mt-5 mb-7 text-justify">DSF is an independent, leftwing students' organisation which was formed in 2012-13 by student activists of JNU. DSF seeks to strengthen the progressive and democratic students' movement across the country on the basis of independent, principled positions on the issues confronting the student community.</p>
-                <a class="font-rbto-cnsd font-bold lg:text-lg text-white px-10 py-3 bg-red-800 rounded-md" href="about.html">learn more</a>
+                <a class="font-rbto-cnsd font-bold lg:text-lg text-white px-10 py-3 bg-red-800 rounded-md inline-block shadow-lg hover:scale-95" href="about.html">learn more</a>
             </div>
             <div class=""><img src="files/unit-conf.png" alt=""></div>
         </section>
-
     </section>
 
-    <!-- DSF's HISTORY -->
-    <section>
-        <div>
+<!-- DSF's HISTORY -->
+    <section class="bg-slate-100 py-10">
+
+        <div class="text-center">
+            <h2 class="text-4xl font-rbto-cnsd font-bold">10 Years of DSF</h2>
+            <h6 class=" mb-7">DSF in movements</h6>
+        </div>
+
+        <div id="movements" class="flex gap-10 overflow-x-scroll snap-x">
+
+            <article class="bg-white shadow-lg min-w-[20rem] lg:min-w-[60vw] relative ml-[50vw]">
+                <img class="h-48 w-full object-cover lg:h-96" src="http://via.placeholder.com/640x360" alt="">
+                <div class="p-4 lg:absolute bottom-0 w-full lg:text-white lg:bg-gradient-to-t from-black/75 snap-center">
+                    <h3 class="font-rbto-cnsd font-bold text-xl text-center lg:text-left lg:text-3xl">12 December Movement</h3>
+                    <div id="movement-description" class="lg:hidden">
+                        <p class="text-justify mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio at libero modi, minus laudantium repellat explicabo unde maxime est iusto dolor sit amet quibusdam a illo blanditiis non totam in rem dolorem ratione!</p>
+                        <a class="font-rbto-cnsd font-bold text-blue-600 underline lg:text-blue-300" href="#">read more</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white shadow-lg min-w-[20rem] lg:min-w-[60vw] relative">
+                <img class="h-48 w-full object-cover lg:h-96" src="http://via.placeholder.com/640x560" alt="">
+                <div class="p-4 lg:absolute bottom-0 w-full lg:text-white lg:bg-gradient-to-t from-black/75 snap-center">
+                    <h3 class="font-rbto-cnsd font-bold text-xl text-center lg:text-left lg:text-3xl">Fight for MCM</h3>
+                    <div id="movement-description" class="lg:hidden">
+                        <p class="text-justify mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio at libero modi, minus laudantium repellat explicabo unde maxime est iusto dolor sit amet quibusdam a illo blanditiis non totam in rem dolorem ratione!</p>
+                        <a class="font-rbto-cnsd font-bold text-blue-600 underline lg:text-blue-300" href="#">read more</a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="bg-white shadow-lg min-w-[20rem] lg:min-w-[60vw] relative">
+                <img class="h-48 w-full object-cover lg:h-96" src="http://via.placeholder.com/440x660" alt="">
+                <div class="p-4 lg:absolute bottom-0 w-full lg:text-white lg:bg-gradient-to-t from-black/75 snap-center">
+                    <h3 class="font-rbto-cnsd font-bold text-xl text-center lg:text-left lg:text-3xl">Justice for Rohith Vemula</h3>
+                    <div id="movement-description" class="lg:hidden">
+                        <p class="text-justify mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio at libero modi, minus laudantium repellat explicabo unde maxime est iusto dolor sit amet quibusdam a illo blanditiis non totam in rem dolorem ratione!</p>
+                        <a class="font-rbto-cnsd font-bold text-blue-600 underline lg:text-blue-300" href="#">read more</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white shadow-lg min-w-[20rem] lg:min-w-[60vw] relative">
+                <img class="h-48 w-full object-cover lg:h-96" src="http://via.placeholder.com/300x360" alt="">
+                <div class="p-4 lg:absolute bottom-0 w-full lg:text-white lg:bg-gradient-to-t from-black/75 snap-center">
+                    <h3 class="font-rbto-cnsd font-bold text-xl text-center lg:text-left lg:text-3xl">9th February Movement: JNU against Sedition Act</h3>
+                    <div id="movement-description" class="lg:hidden">
+                        <p class="text-justify mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio at libero modi, minus laudantium repellat explicabo unde maxime est iusto dolor sit amet quibusdam a illo blanditiis non totam in rem dolorem ratione!</p>
+                        <a class="font-rbto-cnsd font-bold text-blue-600 underline lg:text-blue-300" href="#">read more</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white shadow-lg min-w-[20rem] lg:min-w-[60vw] relative">
+                <img class="h-48 w-full object-cover lg:h-96" src="http://via.placeholder.com/640x360" alt="">
+                <div class="p-4 lg:absolute bottom-0 w-full lg:text-white lg:bg-gradient-to-t from-black/75 snap-center">
+                    <h3 class="font-rbto-cnsd font-bold text-xl text-center lg:text-left lg:text-3xl">Fee Must Fall</h3>
+                    <div id="movement-description" class="lg:hidden">
+                        <p class="text-justify mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio at libero modi, minus laudantium repellat explicabo unde maxime est iusto dolor sit amet quibusdam a illo blanditiis non totam in rem dolorem ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, illum.</p>
+                        <a class="font-rbto-cnsd font-bold text-blue-600 underline lg:text-blue-300" href="#">read more</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white shadow-lg min-w-[20rem] lg:min-w-[60vw] relative">
+                <img class="h-48 w-full object-cover lg:h-96" src="http://via.placeholder.com/340x360" alt="">
+                <div class="p-4 lg:absolute bottom-0 w-full lg:text-white lg:bg-gradient-to-t from-black/75 snap-center">
+                    <h3 class="font-rbto-cnsd font-bold text-xl text-center lg:text-left lg:text-3xl">Occupy UGC</h3>
+                    <div id="movement-description" class="lg:hidden">
+                        <p class="text-justify mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio at libero modi, minus laudantium repellat explicabo unde maxime est iusto dolor sit amet quibusdam a illo blanditiis non totam in rem dolorem ratione!</p>
+                        <a class="font-rbto-cnsd font-bold text-blue-600 underline lg:text-blue-300" href="#">read more</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white shadow-lg min-w-[20rem] lg:min-w-[60vw] relative">
+                <img class="h-48 w-full object-cover lg:h-96" src="http://via.placeholder.com/640x360" alt="">
+                <div class="p-4 lg:absolute bottom-0 w-full lg:text-white lg:bg-gradient-to-t from-black/75 snap-center">
+                    <h3 class="font-rbto-cnsd font-bold text-xl text-center lg:text-left lg:text-3xl">Pads Against Sexism</h3>
+                    <div id="movement-description" class="lg:hidden">
+                        <p class="text-justify mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio at libero modi, minus laudantium repellat explicabo unde maxime est iusto dolor sit amet quibusdam a illo blanditiis non totam in rem dolorem ratione!</p>
+                        <a class="font-rbto-cnsd font-bold text-blue-600 underline lg:text-blue-300" href="#">read more</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white shadow-lg min-w-[20rem] lg:min-w-[60vw] relative mr-[50vw]">
+                <img class="h-48 w-full or lg:w-full lg:h-96" src="http://via.placeholder.com/540x360" alt="">
+                <div class="p-4 lg:absolute bottom-0 w-full lg:text-white lg:bg-gradient-to-t from-black/75 snap-center">
+                    <h3 class="font-rbto-cnsd font-bold text-xl text-center lg:text-left lg:text-3xl">Fight against Facism</h3>
+                    <div id="movement-description" class="lg:hidden">
+                        <p class="text-justify mb:2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio at libero modi.</p>
+                        <a class="font-rbto-cnsd font-bold text-blue-600 underline lg:text-blue-300" href="#">read more</a>
+                    </div>
+                </div>
+            </article>
+        </div>
             
         </div>
     </section>
 
-    <script src="index.js"></script>
+    
+
+    <script src="index.js"></script>    
 </body>
 </html>

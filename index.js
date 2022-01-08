@@ -5,3 +5,11 @@ $(document).ready(function() {
         $('#navmenu').slideToggle();
     })
 })
+
+console.log(window.screen.width)
+
+if(window.screen.width >= 1024) {
+    $('#movements article').hover(function() {
+        $(this).find('#movement-description').slideToggle()
+    })
+}
