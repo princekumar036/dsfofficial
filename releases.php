@@ -14,20 +14,23 @@
     <script src="https://kit.fontawesome.com/1fac2f10ac.js" crossorigin="anonymous"></script>
 
     <style>
-        main {min-height: 100vh; display: flex; justify-content: center; align-items: center;}
-        *{
-            font-family:"Roboto Condensed", sans-serif;
+        .long-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* number of lines to show */
+                    line-clamp: 2; 
+            -webkit-box-orient: vertical;
+          word-break: break-word;
         }
     </style>
 </head>
 
-<body class="max-w-screen-2xl mx-auto">
+<body>
 
 <!-- HEADER -->
     <header class="font-rbto-cnsd font-bold text-lg bg-gray-300 px-10 py-2 lg:flex justify-between items-center lg:text-xl">
-        
         <div class="flex justify-between items-center">
-
             <div>
                 <a href="index.html" class="lg:flex items-center gap-2">
                     <div><img class="w-14 lg:w-20" src="files/logo-color.png" alt="DSF Logo"></div>
@@ -53,44 +56,48 @@
                 <li><a class="navlink active" href="releases.php">RELEASES</a></li>
                 <li><a class="navlink" href="events.php">EVENTS</a></li>
                 <li><a class="navlink" href="contact-us.html">CONTACT US</a></li>
-                <li class="mt-2 lg:mt-0 lg:hover:scale-105 transition-transform"><a class="navbutton bg-red-800 px-5 py-1 rounded text-white lg:px-10 lg:py-2" href="join-us.html">JOIN US</a></li>
+                <li class="mt-2 lg:mt-0 lg:hover:scale-105 transition-transform"><a class="navbutton bg-red-800 px-5 py-1 rounded text-white lg:px-10 lg:py-2" href="membership.php">JOIN US</a></li>
             </ul>
         </nav>
-
     </header>
-    <div style="text-align:center;margin-top:30px;font-size:40px;font-weight:700">Releases</div>
-    <div class="row" style="padding:100px;padding-top:30px">
-    <?php
-        $sql0="select * from releases where status=1";
-        $release_query=mysqli_query($conn,$sql0);
-        while($release_arr=mysqli_fetch_assoc($release_query)){
-        $release_id=$release_arr['id'];
-        $release_title=$release_arr['title'];
-        $release_description=$release_arr['description'];
-        $release_facebook_link=$release_arr['facebook_link'];
-        $release_twitter_link=$release_arr['twitter_link'];
-        $release_instagram_link=$release_arr['instagram_link'];
-        $release_status=$release_arr['status']; 
-        $release_img_url=$release_arr['image_url']; 
-        $release_created_at=$release_arr['created_at'];
-    ?>
-        <div class="col-12" style="display:flex;flex-direction:row;margin-bottom:auto;padding:10px;">
-            <img src="<?php echo $release_img_url; ?>" style="width:auto;max-width:300px;margin-right:20px">
-            <div style="display:block;width:100%;word-break: break-all;">
-                <h1 style="font-size:33px;word-break: break-all;"><b><?php echo $release_title; ?> :-</b></h1>
-                <h2 style="font-size:25px;word-break: break-all;"   ><?php echo $release_description; ?></h2>
-                <div style="text-align:right;margin-top:auto;">
-                    <a style="padding:10px" href="<?php echo $release_facebook_link; ?>"><i class="fa fa-facebook"></i></a>
-                    <a style="padding:10px" href="<?php echo $release_twitter_link; ?>"><i class="fa fa-twitter"></i></a>
-                    <a style="padding:10px" href="<?php echo $release_instagram_link; ?>"><i class="fa fa-instagram"></i></a>
-                    <b>Published at:</b> <?php echo date("d/m/Y h:m:sa", strtotime($release_created_at)); ?>
+	<main class="p-5 lg:px-20">
+    <div class="text-4xl font-rbto-cnsd font-bold text-center my-10">Releases</div>
+    <div>
+        <?php
+            $sql0="select * from releases where status=1";
+            $release_query=mysqli_query($conn,$sql0);
+            while($release_arr=mysqli_fetch_assoc($release_query)){
+            $release_id=$release_arr['id'];
+            $release_title=$release_arr['title'];
+            $release_description=$release_arr['description'];
+            $release_facebook_link=$release_arr['facebook_link'];
+            $release_twitter_link=$release_arr['twitter_link'];
+            $release_instagram_link=$release_arr['instagram_link'];
+            $release_status=$release_arr['status']; 
+            $release_img_url=$release_arr['image_url']; 
+            $release_created_at=$release_arr['created_at'];
+        ?>
+            <div class="border-2 p-2 mb-5 md:flex">
+                <img src="<?php echo $release_img_url; ?>" class="w-full max-h-40 mr-5">
+                <div>
+                    <h1 class="font-bold text-xl py-2"><?php echo $release_title; ?></h1>
+                    <p class="text-sm text-gray-500 pb-2 italic">Published on: <?php echo date("d/m/Y", strtotime($release_created_at)); ?></p>
+                    <div class="long-text"><?php echo $release_description; ?></div>
+                  <a href="#" class="font-bold italic pt-5 border-b-2 border-black inline-block">Read more</a>
+
+                    <div class="mt-3 float-right"">
+                        <a class="px-3" href="<?php echo $release_facebook_link; ?>"><i class="fa fa-facebook"></i></a>
+                        <a class="px-3" href="<?php echo $release_twitter_link; ?>"><i class="fa fa-twitter"></i></a>
+                        <a class="px-3" href="<?php echo $release_instagram_link; ?>"><i class="fa fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    <?php
-        }
-    ?>
+        <?php
+            }
+        ?>
     </div>
+    </main>
+
 <!-- FOOTER -->
     <footer class="bg-red-800 text-white/75 py-5 px-10 lg:px-40 text-center md:text-left">
 

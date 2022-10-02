@@ -1,0 +1,19 @@
+.logo-img{
+	border-radius: 50%;
+}
+body{
+	background: rgb(92,2,2);
+	background: linear-gradient(90deg, rgba(92,2,2,1) 0%, rgba(5,5,88,1) 70%, rgba(19,36,142,1) 100%);
+}
+.custom-card{
+	border: 10px solid #ff9c8c;
+	background: #fff3c6
+}
+.custom-form-control{
+	border: 2px solid;
+    border-radius: 0;
+}
+.custom-form-label{
+	color: #000;
+	font-weight: bold;
+}
