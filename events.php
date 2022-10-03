@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1fac2f10ac.js" crossorigin="anonymous"></script>
 
-    <!-- <style>
+    <style>
         .long-text {
             overflow: hidden;
             text-overflow: ellipsis;
@@ -23,7 +23,7 @@
             -webkit-box-orient: vertical;
           word-break: break-word;
         }
-    </style> -->
+    </style>
 
 </head>
 
@@ -93,7 +93,7 @@
         <img src="<?php echo $event_img_url; ?>" class="w-80 mr-5">
         <div>
             <div style="font-size:33px;word-break: break-word;"><b><?php echo $event_title; ?></b></div>
-            <div style="font-size:17px;word-break: break-word;"><?php echo $event_description; ?></div><br>
+            <div style="font-size:17px;word-break: break-word;"><?php echo $event_description; ?><a href="<?php echo "./events-details.php?id=$event_id" ;?>" class="font-bold italic pt-5 border-b-2 border-black inline-block">Read more</a></div><br>
             <div style="font-size:17px;display:inline;word-break: break-word;"><b>Venue:</b><?php echo $event_venue; ?></div>
             <div style="font-size:17px;display:inline;word-break: break-word;"><b>Guest/Speaker:</b><?php echo $event_speaker; ?></div>
             <div style="font-size:17px;display:inline;word-break: break-word;"><b>Date:</b> <?php echo $event_date; ?></div>

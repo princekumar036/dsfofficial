@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    include './conn.php'
+    include './conn.php';
+    $id=$_GET['id'];
 ?>
 <head>
     <meta charset="UTF-8">
@@ -60,53 +61,42 @@
             </ul>
         </nav>
     </header>
-	<main class="p-5 lg:px-20">
-    <div class="text-4xl font-rbto-cnsd font-bold text-center my-10">Releases</div>
-    <div>
-        <?php
-            $sql0="select * from releases where status=1";
-            $release_query=mysqli_query($conn,$sql0);
-            while($release_arr=mysqli_fetch_assoc($release_query)){
-            $release_id=$release_arr['id'];
-            $release_title=$release_arr['title'];
-            $release_description=$release_arr['description'];
-            $release_facebook_link=$release_arr['facebook_link'];
-            $release_twitter_link=$release_arr['twitter_link'];
-            $release_instagram_link=$release_arr['instagram_link'];
-            $release_status=$release_arr['status']; 
-            $release_img_url=$release_arr['image_url']; 
-            $release_created_at=$release_arr['created_at'];
-        ?>
-            <div class="border-2 p-2 mb-5 md:flex">
-                <img src="<?php echo $release_img_url; ?>" class="w-full max-h-40 mr-5">
-                <div>
-                    <h1 class="font-bold text-xl py-2"><?php echo $release_title; ?></h1>
-                    <p class="text-sm text-gray-500 pb-2 italic">Published on: <?php echo date("d/m/Y", strtotime($release_created_at)); ?></p>
-                    <div class="long-text"><?php echo $release_description; ?></div>
-                    <a href="<?php echo "./releases-details.php?id=$release_id" ;?>" class="font-bold italic pt-5 border-b-2 border-black inline-block">Read more</a>
-
-                    <div class="mt-3 float-right">
-                        <a class="px-3" href="<?php echo $release_facebook_link; ?>"><i class="fa fa-facebook"></i></a>
-                        <a class="px-3" href="<?php echo $release_twitter_link; ?>"><i class="fa fa-twitter"></i></a>
-                        <a class="px-3" href="<?php echo $release_instagram_link; ?>"><i class="fa fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        <?php
-            }
-        ?>
+    <?php
+        $sql0="select * from releases where id=$id";
+        $release_query=mysqli_query($conn,$sql0);
+        $release_arr=mysqli_fetch_assoc($release_query);
+        $release_id=$release_arr['id'];
+        $release_title=$release_arr['title'];
+        $release_description=$release_arr['description'];
+        $release_facebook_link=$release_arr['facebook_link'];
+        $release_twitter_link=$release_arr['twitter_link'];
+        $release_instagram_link=$release_arr['instagram_link'];
+        $release_status=$release_arr['status']; 
+        $release_img_url=$release_arr['image_url']; 
+        $release_created_at=$release_arr['created_at'];
+    ?>
+    <main class="p-5 lg:px-20">
+    <div class="text-4xl font-rbto-cnsd font-bold text-center my-10"><?php echo $release_title; ?></div>
+    <img src="<?php echo $release_img_url; ?>" class="w-full max-h-40 mr-5">
+    <div class="long-text"><?php echo $release_description; ?></div>
+    <p class="text-sm text-gray-500 pb-2 italic">Published on: <?php echo date("d/m/Y", strtotime($release_created_at)); ?></p>
+    <div class="mt-3 float-right">
+        <a class="px-3" href="<?php echo $release_facebook_link; ?>"><i class="fa fa-facebook"></i></a>
+        <a class="px-3" href="<?php echo $release_twitter_link; ?>"><i class="fa fa-twitter"></i></a>
+        <a class="px-3" href="<?php echo $release_instagram_link; ?>"><i class="fa fa-instagram"></i></a>
     </div>
     </main>
-
-<!-- FOOTER -->
+    
+    
+    <!-- FOOTER -->
     <footer class="bg-red-800 text-white/75 py-5 px-10 lg:px-40 text-center md:text-left">
 
-        <div class="font-rbto-cnsd text-sm text-center">
-            <p>All Rights Reserved DSF © 2022</p>
-        </div>
+    <div class="font-rbto-cnsd text-sm text-center">
+        <p>All Rights Reserved DSF © 2022</p>
+    </div>
 
     </footer>
 
-    <script src="index.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
