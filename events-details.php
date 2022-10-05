@@ -87,7 +87,7 @@
     <main class="p-5 lg:px-20">
         <div class="text-4xl font-rbto-cnsd font-bold text-center my-10"><?php echo $event_title; ?></div><br>
         <img src="<?php echo $event_img_url; ?>" class="w-80 mr-5"><br>
-        <div style="font-size:17px;word-break: break-word;"><?php echo $event_description; ?><a href="<?php echo "./events-details.php?id=$event_id" ;?>" class="font-bold italic pt-5 border-b-2 border-black inline-block">Read more</a></div><br>
+        <div style="font-size:17px;word-break: break-word;"><?php echo $event_description; ?></div><br>
         <div style="font-size:17px;display:inline;word-break: break-word;"><b>Venue:</b><?php echo $event_venue; ?></div>
         <div style="font-size:17px;display:inline;word-break: break-word;"><b>Guest/Speaker:</b><?php echo $event_speaker; ?></div>
         <div style="font-size:17px;display:inline;word-break: break-word;"><b>Date:</b> <?php echo $event_date; ?></div>
