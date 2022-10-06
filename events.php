@@ -7,13 +7,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSF | Releases</title>
+    <title>DSF | Events</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="output.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1fac2f10ac.js" crossorigin="anonymous"></script>
 
-    <!-- <style>
+    <style>
         .long-text {
             overflow: hidden;
             text-overflow: ellipsis;
@@ -23,7 +23,7 @@
             -webkit-box-orient: vertical;
           word-break: break-word;
         }
-    </style> -->
+    </style>
 
 </head>
 
@@ -50,6 +50,7 @@
                 <span id="navtoggle-close" class="hidden"><i class="fa-solid fa-xmark text-3xl"></i></span>
             </button>
 
+
         </div> 
 
         <nav id="navmenu" class="hidden text-right lg:block">
@@ -64,6 +65,7 @@
         </nav>
 
     </header>
+
 
     <main class="p-5 lg:px-20">
     
@@ -87,12 +89,11 @@
         $event_img_url=$event_arr['image_url'];
         $event_created_at=$event_arr['created_at'];
     ?>
-
     <div class="border-2 p-2 mb-5 md:flex">
         <img src="<?php echo $event_img_url; ?>" class="w-80 mr-5">
         <div>
             <div style="font-size:33px;word-break: break-word;"><b><?php echo $event_title; ?></b></div>
-            <div style="font-size:17px;word-break: break-word;"><?php echo $event_description; ?></div><br>
+            <div style="font-size:17px;word-break: break-word;"><?php echo $event_description; ?><a href="<?php echo "./events-details.php?id=$event_id" ;?>" class="font-bold italic pt-5 border-b-2 border-black inline-block">Read more</a></div><br>
             <div style="font-size:17px;display:inline;word-break: break-word;"><b>Venue:</b><?php echo $event_venue; ?></div>
             <div style="font-size:17px;display:inline;word-break: break-word;"><b>Guest/Speaker:</b><?php echo $event_speaker; ?></div>
             <div style="font-size:17px;display:inline;word-break: break-word;"><b>Date:</b> <?php echo $event_date; ?></div>
@@ -108,6 +109,7 @@
         }
     ?>
     </div>
+
     </main>
 <!-- FOOTER -->
     <footer class="bg-red-800 text-white/75 py-5 px-10 lg:px-40 text-center md:text-left">
