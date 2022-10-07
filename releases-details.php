@@ -77,14 +77,14 @@
     ?>
     <main class="p-5 lg:px-20">
     <div class="text-4xl font-rbto-cnsd font-bold text-center my-10"><?php echo $release_title; ?></div>
-    <img src="<?php echo $release_img_url; ?>" class="w-full max-h-40 mr-5">
-    <div class="long-text"><?php echo $release_description; ?></div>
+    <img src="<?php echo $release_img_url; ?>" class="w-80 mr-5"><br>
+    <div style="word-break: break-word;"><?php echo $release_description; ?></div><br>
     <p class="text-sm text-gray-500 pb-2 italic">Published on: <?php echo date("d/m/Y", strtotime($release_created_at)); ?></p>
     <div class="mt-3 float-right">
         <a class="px-3" href="<?php echo $release_facebook_link; ?>"><i class="fa fa-facebook"></i></a>
         <a class="px-3" href="<?php echo $release_twitter_link; ?>"><i class="fa fa-twitter"></i></a>
         <a class="px-3" href="<?php echo $release_instagram_link; ?>"><i class="fa fa-instagram"></i></a>
-    </div>
+    </div><br>
     </main>
     
     
