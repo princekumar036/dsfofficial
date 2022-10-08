@@ -75,10 +75,9 @@ if(isset($_POST['subbtn'])){
             </nav>
         </header>
 
-
 			<main>
 				<div class="container-fluid">
-					<div class="w-1/3 mx-auto row d-flex justify-content-center">
+					<div class="px-10 md:w-1/3 mx-auto row d-flex justify-content-center">
 						<div class="col-md-7 col-lg-4 col-12">
 							<div class="card custom-card">
 							<!-- <div class="justify-content-center d-flex">
