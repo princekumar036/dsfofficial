@@ -396,7 +396,7 @@ embed,
 object {
   display: block;
   /* 1 */
-  vertical-align: middle;
+  /* vertical-align: middle; */
   /* 2 */
 }
 
@@ -722,6 +722,10 @@ video {
 
 .max-h-40 {
   max-height: 10rem;
+}
+
+.max-h-60 {
+  max-height: 20rem;
 }
 
 .min-h-screen {

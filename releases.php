@@ -78,7 +78,7 @@
             $release_created_at=$release_arr['created_at'];
         ?>
             <div class="border-2 p-2 mb-5 md:flex">
-                <img src="<?php echo $release_img_url; ?>" class="w-full max-h-40 mr-5">
+                <img src="<?php echo $release_img_url; ?>" class="w-80 mr-5">
                 <div>
                     <h1 class="font-bold text-xl py-2"><?php echo $release_title; ?></h1>
                     <p class="text-sm text-gray-500 pb-2 italic">Published on: <?php echo date("d/m/Y", strtotime($release_created_at)); ?></p>
