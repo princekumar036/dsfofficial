@@ -81,7 +81,7 @@ if(isset($_POST['subbtn'])){
 				<h3 class="font-rbto-cnsd font-bold text-2xl mt-10">
 					<center>Membership Form</center>
 				</h3>
-              	<p class="mb-10 text-center">For students of other Educational Institutions</p>
+              	<p class="mb-10 text-center">For students of JNU</p>
 				<div class="mb-20">
 
 					<form class="border-2 font-rbto-cnsd px-5 py-10" method="post" action="registration-success.html">
