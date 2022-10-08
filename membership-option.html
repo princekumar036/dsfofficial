@@ -9,19 +9,22 @@
     <link rel="icon" type="image/x-icon" href="/files/favicon.ico">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="output.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1fac2f10ac.js" crossorigin="anonymous"></script>
-
     <style>
-        /* main {min-height: 100vh; display: flex; justify-content: center; align-items: center;} */
+        main {
+            min-height: 100vh;
+        }
     </style>
 </head>
 
 <body class="max-w-screen-2xl mx-auto">
 
-<!-- HEADER -->
-    <header class="font-rbto-cnsd font-bold text-lg bg-gray-300 px-10 py-2 lg:flex justify-between items-center lg:text-xl">
-        
+    <!-- HEADER -->
+    <header
+        class="font-rbto-cnsd font-bold text-lg bg-gray-300 px-10 py-2 lg:flex justify-between items-center lg:text-xl">
+
         <div class="flex justify-between items-center">
 
             <div>
@@ -49,20 +52,26 @@
                 <li><a class="navlink" href="releases.php">RELEASES</a></li>
                 <li><a class="navlink" href="events.php">EVENTS</a></li>
                 <li><a class="navlink" href="contact-us.html">CONTACT US</a></li>
-                <li class="mt-2 lg:mt-0 lg:hover:scale-105 transition-transform"><a class="navbutton bg-red-800 px-5 py-1 rounded text-white lg:px-10 lg:py-2" href="membership-option.html">JOIN US</a></li>
+                <li class="mt-2 lg:mt-0 lg:hover:scale-105 transition-transform"><a
+                        class="navbutton bg-red-800 px-5 py-1 rounded text-white lg:px-10 lg:py-2"
+                        href="membership-option.html">JOIN US</a></li>
             </ul>
         </nav>
 
     </header>
 
-<!-- MAIN -->
-    <main class="min-h-screen text-center grid content-center">
-        <p class="text-xl font-bold">You have registered successfully.</p>
-        <p>Please <a class="underline text-blue" href="contact-us.html">contact</a> any of our office bearers to pay the membership fee of Rs 5.</p>
+    <!-- MAIN -->
+    <main class="grid gap-10 place-content-center">
+        <a href="membership-jnu.php" class="w-80 h-20 grid place-content-center border-2 bg-white rounded-xl shadow-lg">
+            <span class="font-bold">For students of JNU</span>
+        </a>
+        <a href="membership-other.php" class="w-80 h-20 grid place-content-center border-2 bg-white rounded-xl shadow-lg">
+            <span class="font-bold">For students of other Educational Institutions</span>
+        </a>
     </main>
 
 
-<!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="bg-red-800 text-white/75 py-5 px-10 lg:px-40 text-center md:text-left">
 
         <div class="font-rbto-cnsd text-sm text-center">
@@ -73,4 +82,5 @@
 
     <script src="index.js"></script>
 </body>
+
 </html>
