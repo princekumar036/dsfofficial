@@ -65,7 +65,7 @@ if(isset($_POST['subbtn'])){
 
             <nav id="navmenu" class="hidden text-right lg:block">
                 <ul class="lg:flex gap-8 items-center">
-                    <li><a class="navlink active" href="index.html">HOME</a></li>
+                    <li><a class="navlink" href="index.html">HOME</a></li>
                     <li><a class="navlink" href="about.html">ABOUT</a></li>
                     <li><a class="navlink" href="releases.php">RELEASES</a></li>
                     <li><a class="navlink" href="events.php">EVENTS</a></li>
@@ -75,90 +75,86 @@ if(isset($_POST['subbtn'])){
             </nav>
         </header>
 
-			<main>
-				<div class="container-fluid">
-					<div class="px-10 md:w-1/3 mx-auto row d-flex justify-content-center">
-						<div class="col-md-7 col-lg-4 col-12">
-							<div class="card custom-card">
-							<!-- <div class="justify-content-center d-flex">
-									<img class="mt-3 logo-img" width="150" src="files/star-black-lg.svg" />
-								</div> -->
-								<h3 class="font-rbto-cnsd font-bold text-2xl my-10"><center>Membership Form</center></h3>
-							<div class="mb-20">
-								<!-- <?php 
-								if($is_success){
-								?>
-								<div class="alert alert-dark d-flex align-items-center" role="alert">
-									<div>
-										You have registered successfully
-									</div>
-									</div>
-									<?php } ?> -->
-								<form class="border-2 font-rbto-cnsd px-5 py-10" method="post" action="registration-success.html">
-									<div class="mb-3">
-										<label class="block font-bold form-label custom-form-label">Name*</label>
-										<input class="block w-full border-b-2 focus:border-b-black mb-10" maxlength="200" name="name" type="text" class="form-control custom-form-control" required>
-									</div>
-									<div class="mb-3">
-										<label class="block font-bold form-label custom-form-label">Email*</label>
-										<input class="block w-full border-b-2 focus:border-b-black mb-10" maxlength="200" name="email" type="email" class="form-control custom-form-control" required>
-									</div>
-									<div class="mb-3">
-										<label class="block font-bold form-label custom-form-label">Mobile*</label>
-										<input class="block w-full border-b-2 focus:border-b-black mb-10" name="mobile" maxlength="10" type="text" class="form-control custom-form-control" required>
-									</div>
-									<div class="mb-3">
-										<label class="block font-bold form-label custom-form-label">School*</label>
-										<select class="block w-full border-b-2 focus:border-b-black mb-10" name="school" class="form-control custom-form-control" required>
-											<option value="" selected disabled hidden>Choose here</option>
-											<option value="School of International Studies">School of International Studies</option>
-											<option value="School of Language, Literature & Culture Studies">School of Language, Literature & Culture Studies</option>
-											<option value="School of Life Sciences">School of Life Sciences</option>
-											<option value="School of Social Sciences">School of Social Sciences</option>
-											<option value="School of Environment Sciences">School of Environment Sciences</option>
-											<option value="School of Computer & System Sciences">School of Computer & System Sciences</option>
-											<option value="School of Physical Sciences">School of Physical Sciences</option>
-											<option value="School of Arts and Aesthetics">School of Arts and Aesthetics</option>
-											<option value="School of Biotechnology">School of Biotechnology</option>
-											<option value="School of Sanskrit and Indic Studies">School of Sanskrit and Indic Studies</option>
-											<option value="School of Engineering">School of Engineering</option>
-											<option value="ABV School of Management and Entrepreneurship">ABV School of Management and Entrepreneurship</option>
-											<option value="Special Centre for the study of North East India">Special Centre for the study of North East India</option>
-											<option value="Special Center for E-learning">Special Center for E-learning</option>
-											<option value="Special Center for Molecular Medicine">Special Center for Molecular Medicine</option>
-										</select>
-									</div>
-									<div class="mb-3">
-										<label class="block font-bold form-label custom-form-label">Centre* (Write school name if center is same)</label>
-										<input class="block w-full border-b-2 focus:border-b-black mb-10" name="centre" maxlength="200" type="text" class="form-control custom-form-control" required>
-									</div>
-									<div class="mb-10">
-										<label class="block font-bold form-label custom-form-label">Course*</label>
-										<select class="block w-full border-b-2 focus:border-b-black mb-10" name="course" class="form-control custom-form-control" required>
-											<option value="B.A">B.A</option>
-											<option value="M.A">M.A</option>
-											<option value="M.Phil">M.Phil</option>
-											<option value="Ph.D">Ph.D</option>
-											<option value="B.Tech">B.Tech</option>
-											<option value="MBA">MBA</option>
-											<option value="MCA">MCA</option>
-											<option value="MSc">MSc</option>
-											<option value="M.Tech">M.Tech</option>
-											<option value="Diploma">Diploma</option>
-											<option value="OTH">Other</option>
-										</select>
-									</div>
+		<main>
+			<div class="px-10 max-w-md mx-auto row d-flex justify-content-center">
+				<h3 class="font-rbto-cnsd font-bold text-2xl my-10">
+					<center>Membership Form</center>
+				</h3>
+				<div class="mb-20">
 
-									<input type="submit" name="subbtn" style="display: block;margin: 0 auto" class="bg-red-800 px-10 py-2 rounded text-white text-lg font-rbto-cnsd font-bold hover:scale-110 transition-transform inline-block" />
-									</form>
-							</div>
-							</div>
-							
-							
-							
+					<form class="border-2 font-rbto-cnsd px-5 py-10" method="post" action="registration-success.html">
+						<div class="mb-3">
+							<label class="block font-bold form-label custom-form-label">Name*</label>
+							<input class="block w-full border-b-2 focus:border-b-black mb-10" maxlength="200" name="name"
+								type="text" class="form-control custom-form-control" required>
 						</div>
-					</div>
+						<div class="mb-3">
+							<label class="block font-bold form-label custom-form-label">Email*</label>
+							<input class="block w-full border-b-2 focus:border-b-black mb-10" maxlength="200" name="email"
+								type="email" class="form-control custom-form-control" required>
+						</div>
+						<div class="mb-3">
+							<label class="block font-bold form-label custom-form-label">Mobile*</label>
+							<input class="block w-full border-b-2 focus:border-b-black mb-10" name="mobile" maxlength="10"
+								type="text" class="form-control custom-form-control" required>
+						</div>
+						<div class="mb-3">
+							<label class="block font-bold form-label custom-form-label">School*</label>
+							<select class="block w-full border-b-2 focus:border-b-black mb-10" name="school"
+								class="form-control custom-form-control" required>
+								<option value="" selected disabled hidden>Choose here</option>
+								<option value="School of International Studies">School of International Studies</option>
+								<option value="School of Language, Literature & Culture Studies">School of Language, Literature
+									& Culture Studies</option>
+								<option value="School of Life Sciences">School of Life Sciences</option>
+								<option value="School of Social Sciences">School of Social Sciences</option>
+								<option value="School of Environment Sciences">School of Environment Sciences</option>
+								<option value="School of Computer & System Sciences">School of Computer & System Sciences
+								</option>
+								<option value="School of Physical Sciences">School of Physical Sciences</option>
+								<option value="School of Arts and Aesthetics">School of Arts and Aesthetics</option>
+								<option value="School of Biotechnology">School of Biotechnology</option>
+								<option value="School of Sanskrit and Indic Studies">School of Sanskrit and Indic Studies
+								</option>
+								<option value="School of Engineering">School of Engineering</option>
+								<option value="ABV School of Management and Entrepreneurship">ABV School of Management and
+									Entrepreneurship</option>
+								<option value="Special Centre for the study of North East India">Special Centre for the study of
+									North East India</option>
+								<option value="Special Center for E-learning">Special Center for E-learning</option>
+								<option value="Special Center for Molecular Medicine">Special Center for Molecular Medicine
+								</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label class="block font-bold form-label custom-form-label">Centre* (Write school name if center is
+								same)</label>
+							<input class="block w-full border-b-2 focus:border-b-black mb-10" name="centre" maxlength="200"
+								type="text" class="form-control custom-form-control" required>
+						</div>
+						<div class="mb-10">
+							<label class="block font-bold form-label custom-form-label">Course*</label>
+							<select class="block w-full border-b-2 focus:border-b-black mb-10" name="course"
+								class="form-control custom-form-control" required>
+								<option value="B.A">B.A</option>
+								<option value="M.A">M.A</option>
+								<option value="M.Phil">M.Phil</option>
+								<option value="Ph.D">Ph.D</option>
+								<option value="B.Tech">B.Tech</option>
+								<option value="MBA">MBA</option>
+								<option value="MCA">MCA</option>
+								<option value="MSc">MSc</option>
+								<option value="M.Tech">M.Tech</option>
+								<option value="Diploma">Diploma</option>
+								<option value="OTH">Other</option>
+							</select>
+						</div>
+
+						<input type="submit" name="subbtn" style="display: block;margin: 0 auto"
+							class="bg-red-800 px-10 py-2 rounded text-white text-lg font-rbto-cnsd font-bold hover:scale-110 transition-transform inline-block" />
+					</form>
 				</div>
+			</div>
 		</main>
 
 		<footer class="bg-red-800 text-white/75 py-5 px-10 lg:px-40 text-center md:text-left">
